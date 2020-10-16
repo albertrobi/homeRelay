@@ -58,7 +58,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 </head>
 
 <body>
-  <h2>Albert Panzio</h2>
+  <h2>Vilagitas Napelemrol</h2>
   %BUTTONPLACEHOLDER%
 <script>function toggleCheckbox(element) {
   var xhr = new XMLHttpRequest();
@@ -77,7 +77,7 @@ String processor(const String& var){
     String buttons ="";
     for(int i=1; i<=NUM_RELAYS; i++){
       String relayStateValue = relayState(i);
-      buttons+= "<h4>Camera Relay - (GPIO " + String(relayGPIOs[i-1]) + ")</h4><label class=\"switch\"><input type=\"checkbox\" onchange=\"toggleCheckbox(this)\" id=\"" + String(i) + "\" "+ relayStateValue +"><span class=\"slider\"></span></label>";
+      buttons+= "<h4>Vilagitas - (GPIO " + String(relayGPIOs[i-1]) + ")</h4><label class=\"switch\"><input type=\"checkbox\" onchange=\"toggleCheckbox(this)\" id=\"" + String(i) + "\" "+ relayStateValue +"><span class=\"slider\"></span></label>";
     }
     return buttons;
   }
